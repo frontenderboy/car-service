@@ -1,0 +1,14 @@
+{
+    "name": "UCT \u2014 Car Service",
+    "short_name": "UCT \u2014 Car Service",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone"
+}
