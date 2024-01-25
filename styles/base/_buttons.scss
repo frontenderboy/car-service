@@ -1,0 +1,73 @@
+.buttons__box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@mixin btn($color, $weight, $background, $border) {
+    display: flex;
+    align-items: center;
+    padding: 24px 48px;
+    height: 61px;
+    border-radius: 16px;
+    background: $background;
+    border: $border;
+    transition: all .3s ease;
+
+    color: $color;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: 120%;
+} 
+
+.header-btn.btn__appointment {
+    @include btn($color-white, 600, $color-red, none);
+    
+    &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('../../img/arrow.svg');
+        transition: all .3s ease;
+    }
+
+    &:hover::after {
+        transform: translateX(10px)
+    }
+}
+
+.header-btn.btn__consultation {
+    @include btn($color-white, 500, transparent, 2px solid rgba(255, 255, 255, 0.20));
+
+    &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background-image: url('../../img/message-logo.svg');
+    }
+
+    &:hover {
+        background: $color-red;
+    }
+}
+
+.footer-btn.btn__appointment {
+    @include btn($color-dark, 600, $color-white, none);
+
+    &:hover {
+        color: $color-red;
+    }
+}
+
+.footer-btn.btn__consultation {
+    @include btn($color-white, 500, transparent, 2px solid rgba(255, 255, 255, 0.50));
+
+    &:hover {
+        background: $color-white;
+        color: $color-dark;
+    } 
+}

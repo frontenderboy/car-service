@@ -1,0 +1,58 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background: $color-red;
+    border-radius: 32px;
+    padding: 80px 0;
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 152px;
+}
+
+.footer__inner {
+    max-width: 472px;
+}
+
+.footer__title {
+    color: $color-white;
+    font-size: 5.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.footer__text {
+    color: $color-white;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 48px 0 148px;
+}
+
+.advantages-list {
+    display: grid;
+    grid-template-columns: repeat(2, 264px);
+    gap: 55px 48px;
+}
+
+.advantages__title {
+    color: $color-white;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 32px 0 24px;
+}
+
+.advantages__desc {
+    color: $color-white;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}

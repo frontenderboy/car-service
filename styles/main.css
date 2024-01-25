@@ -482,6 +482,105 @@ body {
   text-transform: uppercase;
 }
 
+.buttons__box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-btn.btn__appointment {
+  display: flex;
+  align-items: center;
+  padding: 24px 48px;
+  height: 61px;
+  border-radius: 16px;
+  background: #FF001D;
+  border: none;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.header-btn.btn__appointment::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../img/arrow.svg");
+  transition: all 0.3s ease;
+}
+.header-btn.btn__appointment:hover::after {
+  transform: translateX(10px);
+}
+
+.header-btn.btn__consultation {
+  display: flex;
+  align-items: center;
+  padding: 24px 48px;
+  height: 61px;
+  border-radius: 16px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+.header-btn.btn__consultation::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-image: url("../../img/message-logo.svg");
+}
+.header-btn.btn__consultation:hover {
+  background: #FF001D;
+}
+
+.footer-btn.btn__appointment {
+  display: flex;
+  align-items: center;
+  padding: 24px 48px;
+  height: 61px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+  color: #141414;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.footer-btn.btn__appointment:hover {
+  color: #FF001D;
+}
+
+.footer-btn.btn__consultation {
+  display: flex;
+  align-items: center;
+  padding: 24px 48px;
+  height: 61px;
+  border-radius: 16px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+.footer-btn.btn__consultation:hover {
+  background: #ffffff;
+  color: #141414;
+}
+
 .header {
   margin-bottom: 16px;
 }
@@ -591,55 +690,6 @@ body {
   line-height: 110%;
 }
 
-.header__buttons {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.btn-appointment {
-  display: flex;
-  align-items: center;
-  padding: 24px 40px 24px 48px;
-  height: 61px;
-  border-radius: 16px;
-  background: #FF001D;
-  color: #ffffff;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-}
-.btn-appointment::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../../img/arrow.svg");
-}
-
-.btn-consultation {
-  display: flex;
-  align-items: center;
-  padding: 24px 48px;
-  height: 61px;
-  border-radius: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  color: var(--Primary-White, #FFF);
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-}
-.btn-consultation::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  background-image: url("../../img/message-logo.svg");
-}
-
 .services {
   margin-bottom: 16px;
 }
@@ -676,6 +726,10 @@ body {
   width: 24px;
   height: 24px;
   background-image: url("../../img/arrow.svg");
+  transition: all 0.3s ease;
+}
+.services-list__item:hover::after {
+  transform: translateX(10px);
 }
 
 .list__item-info {
@@ -708,6 +762,10 @@ body {
   border-radius: 0 0 32px 0;
 }
 
+.favorites-works {
+  margin-bottom: 16px;
+}
+
 .favorites-works__box {
   background: #ffffff;
   width: 100%;
@@ -735,6 +793,10 @@ body {
 .work-item {
   max-width: 264px;
   position: relative;
+  transition: all 0.3s ease;
+}
+.work-item:hover {
+  transform: translateY(-10px);
 }
 
 .work-item__title {
@@ -817,4 +879,63 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: #FF001D;
+  border-radius: 32px;
+  padding: 80px 0;
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 152px;
+}
+
+.footer__inner {
+  max-width: 472px;
+}
+
+.footer__title {
+  color: #ffffff;
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.footer__text {
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 48px 0 148px;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(2, 264px);
+  gap: 55px 48px;
+}
+
+.advantages__title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin: 32px 0 24px;
+}
+
+.advantages__desc {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }/*# sourceMappingURL=main.css.map */

@@ -39,6 +39,11 @@
         width: 24px;
         height: 24px;
         background-image: url('../../img/arrow.svg');
+        transition: all .3s ease;
+    }
+
+    &:hover::after {
+        transform: translateX(10px);
     }
 }
 
